@@ -166,6 +166,9 @@ width: 1200px;
     letter-spacing: 0.02rem;
     text-decoration: none;
     padding: 32px 0;
+    transition-property: color;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing-function);
 }
 
 
@@ -293,6 +296,7 @@ rgba(47, 48, 58, 0.4) ),
     padding: 6px 22px;
     color: var(--primary-text-color);
     background-color:var(--silver-bgc);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     font-family: Roboto;
     font-weight: 500;
      font-size: 16px;
@@ -302,7 +306,7 @@ rgba(47, 48, 58, 0.4) ),
     border-radius: 4px;
     cursor: pointer;
     border: #EEEEEE;
-    transition-property: color, background-color, box-shadow;
+    transition-property: color, background-color, filter;
     transition-duration: var(--transition-duration);
     transition-timing-function: var(--transition-timing-function);
 }
@@ -418,6 +422,9 @@ rgba(47, 48, 58, 0.4) ),
     width: 20px;
     height: 20px;
     fill: #AFB1B8;
+    transition-property: fill;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing-function);
     
 }
 .soc-list-list {
@@ -433,7 +440,7 @@ rgba(47, 48, 58, 0.4) ),
     height: 44px;
     border-radius: 50%;
     background-color: #FFFFFF;
-    transition-property: color, background-color, box-shadow;
+    transition-property: background-color;
     transition-duration: var(--transition-duration);
     transition-timing-function: var(--transition-timing-function);
 }
@@ -594,7 +601,7 @@ padding: 60px 0px;
     border-radius: 50%;
     color: var(--white-color);
         background-color: rgba(255, 255, 255, 0.1);
-        transition-property: color, background-color, box-shadow;
+        transition-property: background-color;
         transition-duration: var(--transition-duration);
         transition-timing-function: var(--transition-timing-function);
     
@@ -649,6 +656,10 @@ padding: 60px 0px;
 .address-list {
     padding: 0;
     margin: 0;
+    color: #AFB1B8;
+    transition-property: color;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing-function);
 
 }
 .address-list li:not(:last-child){
@@ -688,7 +699,7 @@ padding: 60px 0px;
     color: #AFB1B8;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
-    transition-property: color, background-color, box-shadow;
+    transition-property: color, border-color;
     transition-duration: var(--transition-duration);
     transition-timing-function: var(--transition-timing-function);
    
@@ -723,9 +734,11 @@ padding: 60px 0px;
  }
 
  .backdrop.is-hidden {
-     visibility: hidden;
+    visibility: hidden;
      opacity: 0;
      pointer-events: none;
+    transition: opacity 1s, visibility 0s 1s;
+    
  }
 
  .backdrop.is-hidden .modal {
@@ -809,12 +822,12 @@ padding: 60px 0px;
      letter-spacing: 0.03em;
      color: var(--primary-white-color);
  }
- .works-box {
+ /* .works-box {
      margin: -15px;
      transition-property: box-shadow, transform;
      transition-duration: var(--transition-duration);
      transition-timing-function: var(--transition-timing-function);
- }
+ } */
 
  .works {
      display: flex;
@@ -851,27 +864,24 @@ padding: 60px 0px;
  .foto-item:hover .thumb-box,
  .foto-item:focus .thumb-box {
      transform: translateY(0);
-     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
-        0px 4px 4px rgba(0, 0, 0, 0.06),
-        1px 4px 6px rgba(0, 0, 0, 0.16);
+    
  }
  /* text decoration none */
  /* Overlay */
  .device .itn {
      position: relative;
  }
- .overlay {
-     position: absolute;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     bottom: 0;
-     left: 0;
-     width: 100%;
-     height: 70px;
-     background-color: rgba(47, 48, 58, 0.8);
- }
+ 
  .overlay-text {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(47, 48, 58, 0.8);
      font-size: 14px;
      font-weight: 700;
      line-height: 1.14;
